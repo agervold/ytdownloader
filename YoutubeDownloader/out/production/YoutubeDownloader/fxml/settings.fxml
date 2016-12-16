@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <HBox fx:id="playlistHBox" alignment="CENTER_LEFT">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ic_playlist_add_black_36dp_1x.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Playlist Directories" />
+                  <CheckBox fx:id="createDirectoryCheckBox" mnemonicParsing="false" selected="true">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin></CheckBox>
+               </children>
+            </HBox>
+            <HBox fx:id="directoryMusicHBox" alignment="CENTER_LEFT">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ic_library_music_black_36dp_1x.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text fx:id="directoryChooserMusic" strokeType="OUTSIDE" strokeWidth="0.0" text="Music Directory" />
+               </children>
+            </HBox>
+            <HBox fx:id="directoryVideosHBox" alignment="CENTER_LEFT">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ic_video_library_black_36dp_1x.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text fx:id="directoryChooserVideos" strokeType="OUTSIDE" strokeWidth="0.0" text="Video Directory" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView fx:id="returnButton" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_RIGHT">
+         <image>
+            <Image url="@../images/ic_close_black_48dp_2x.png" />
+         </image>
+         <StackPane.margin>
+            <Insets right="20.0" top="20.0" />
+         </StackPane.margin>
+      </ImageView>
+   </children>
+</StackPane>

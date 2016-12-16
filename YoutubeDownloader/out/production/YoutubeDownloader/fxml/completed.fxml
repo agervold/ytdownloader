@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox fx:id="completedContainer" alignment="CENTER" prefHeight="300.0" prefWidth="500.0" stylesheets="@../main.css" visible="false">
+         <children>
+            <Text fx:id="completedMessageName" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" />
+            <HBox fx:id="playButton" alignment="CENTER" maxHeight="50.0" maxWidth="250.0" prefHeight="50.0" prefWidth="250.0" styleClass="downloadButton">
+               <children>
+                  <ImageView fx:id="playButtonIcon" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ic_play_circle_outline_black_48dp_2x.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text fx:id="fileName" strokeType="OUTSIDE" strokeWidth="0.0" text="Play">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <MediaView fx:id="MediaView" fitHeight="200.0" fitWidth="355.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </MediaView>
+            <HBox fx:id="explorerButton" alignment="CENTER" maxHeight="50.0" maxWidth="250.0" prefHeight="50.0" prefWidth="250.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ic_file_download_black_48dp_2x.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Open in Explorer">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+               <styleClass>
+                  <String fx:value="anotherOne" />
+                  <String fx:value="downloadButton" />
+               </styleClass>
+            </HBox>
+            <HBox fx:id="anotherButton" alignment="CENTER" maxHeight="50.0" maxWidth="250.0" prefHeight="50.0" prefWidth="250.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ic_file_download_black_48dp_2x.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Download another file">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+               <styleClass>
+                  <String fx:value="anotherOne" />
+                  <String fx:value="downloadButton" />
+               </styleClass>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView fx:id="completedCheckmark" fitHeight="97.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icon_done.png" />
+         </image>
+      </ImageView>
+   </children>
+</StackPane>

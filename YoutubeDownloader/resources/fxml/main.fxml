@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="center" maxHeight="300.0" maxWidth="500.0" minHeight="300.0" minWidth="500.0" prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: #fff;" stylesheets="@../main.css">
+          <TextField fx:id="linkTextField" maxWidth="200.0" prefHeight="40.0" prefWidth="200.0" promptText="Link" styleClass="linkTextField">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+         </TextField>
+         <HBox alignment="CENTER">
+            <children>
+               <RadioButton fx:id="audioRadioButton" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" selected="true" text="Audio">
+                  <toggleGroup>
+                     <ToggleGroup fx:id="format" />
+                  </toggleGroup>
+                  <HBox.margin>
+                     <Insets right="10.0" />
+                  </HBox.margin>
+               </RadioButton>
+               <RadioButton fx:id="videoRadioButton" mnemonicParsing="false" text="Video" toggleGroup="$format">
+                  <HBox.margin>
+                     <Insets left="10.0" />
+                  </HBox.margin>
+               </RadioButton>
+            </children>
+            <VBox.margin>
+               <Insets bottom="20.0" top="20.0" />
+            </VBox.margin>
+         </HBox>
+          <Button id="downloadButton" fx:id="downloadButton" defaultButton="true" prefHeight="40.0" prefWidth="200.0" styleClass="downloadButton" text="Download" />
+      </VBox>
+      <ImageView fx:id="settingsButton" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_LEFT">
+         <image>
+            <Image url="@../images/ic_settings_black_48dp_2x.png" />
+         </image>
+         <StackPane.margin>
+            <Insets left="20.0" top="20.0" />
+         </StackPane.margin>
+      </ImageView>
+   </children>
+</StackPane>
